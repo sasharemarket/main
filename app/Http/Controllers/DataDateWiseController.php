@@ -28,7 +28,7 @@ class DataDateWiseController extends Controller
     }
 
     public function getDataDateWiseDiiSave(Request $request) {
-
+        $data =  $this->repository->getDataDateWiseDiiSave($request);
     }
 
     public function getDataDateWiseFii(){
@@ -37,7 +37,7 @@ class DataDateWiseController extends Controller
     }
 
     public function getDataDateWiseFiiSave(Request $request) {
-
+        $data =  $this->repository->getDataDateWiseFiiSave($request);
     }
 
     public function getDataDateWisePro(){
@@ -46,7 +46,7 @@ class DataDateWiseController extends Controller
     }
 
     public function getDataDateWiseProSave(Request $request) {
-
+        $data =  $this->repository->getDataDateWiseProSave($request);
     }
 }
 
