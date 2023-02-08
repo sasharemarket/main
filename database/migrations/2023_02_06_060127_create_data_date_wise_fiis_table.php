@@ -14,8 +14,8 @@ class CreateDataDateWiseFiisTable extends Migration
     public function up()
     {
         Schema::create('data_date_wise_fiis', function (Blueprint $table) {
-            $table->id();
-            $table->string('data_date_wise_id');
+            $table->bigIncrements('id');
+            // $table->string('data_date_wise_id');
             $table->string('date_of_entry');
             $table->string('future_index_long');
             $table->string('future_index_short');

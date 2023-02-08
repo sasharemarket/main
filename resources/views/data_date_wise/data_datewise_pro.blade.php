@@ -2,7 +2,7 @@
 @section('content')
 
     <form action="/action_page.php" id="datewiseform">
-        <label for="fname">Client</label><br>
+        <label for="fname">Pro</label><br>
         <label for="fname">Future Index Long</label><br>
         <input type="text" id="future_index_long" name="future_index_long" value=""><br>
         <label for="lname">Future Index Short</label><br>
@@ -59,7 +59,7 @@
             $('#datewisesubmit').on('click', function() {
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "You Want To Add Client Information",
+                    text: "You Want To Add Pro Information",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -71,7 +71,7 @@
                         if (statusofform) {
                             $(".preloader").show();
                             var deptform = $('#datewiseform');
-                            var url = "{{ env('APP_URL') }}/getdatadatewiseclientsave";
+                            var url = "{{ env('APP_URL') }}/getdatadatewiseprosave";
                             $.ajax({
                                 type: "POST",
                                 headers: {
@@ -88,7 +88,6 @@
                                                 '/masters/department-master';
                                         }, 3000);
                                     } else {
-                                        var reqID = response.data.id;
                                         toastr.success(response.message);
                                         setInterval(function() {
                                             window.location = APP_URL +

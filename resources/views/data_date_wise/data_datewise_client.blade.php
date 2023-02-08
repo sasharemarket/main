@@ -81,18 +81,19 @@
                                 data: deptform.serialize(),
                                 success: function(response) {
                                     $(".preloader").hide();
+                                    console.log(response.status_code);
+
+
                                     if (response.status_code == 500) {
                                         toastr.success(response.message);
                                         setInterval(function() {
-                                            window.location = APP_URL +
-                                                '/masters/department-master';
+                                            window.location = APP_URL;
                                         }, 3000);
                                     } else {
-                                        var reqID = response.data.id;
                                         toastr.success(response.message);
                                         setInterval(function() {
                                             window.location = APP_URL +
-                                                '/masters/department-master-edit/' + reqID;
+                                                '/getdatadatewisedii';
                                         }, 3000);
 
                                     }
