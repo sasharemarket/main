@@ -8,8 +8,7 @@
         <label for="lname">Future Index Short</label><br>
         <input type="text" id="future_index_short" name="future_index_short" value=""><br>
 
-        <label for="lname">Long Index Long Short %</label><br>
-        <input type="text" id="long_index_long_short_percent" name="long_index_long_short_percent" value=""><br>
+
 
 
         <label for="fname">Future Stock Long</label><br>
@@ -24,17 +23,13 @@
         <input type="text" id="option_index_put_long" name="option_index_put_long" value=""><br>
 
 
-        <label for="lname">Option Index buy Call Put %</label><br>
-        <input type="text" id="option_index_buy_call_put_percentage" name="option_index_buy_call_put_percentage" value=""><br>
-
+       
 
         <label for="fname">Option Index Call Short</label><br>
         <input type="text" id="option_index_call_short" name="option_index_call_short" value=""><br>
         <label for="lname">Option Index Put Short</label><br>
         <input type="text" id="option_index_put_short" name="option_index_put_short" value=""><br>
-        <label for="lname">Option Index Short Call Put %</label><br>
-        <input type="text" id="option_index_short_call_put_percent" name="option_index_short_call_put_percent"
-            value=""><br>
+
 
         <label for="lname">Option Stock Call Long </label><br>
         <input type="text" id="option_stock_call_long" name="option_stock_call_long" value=""><br>
@@ -72,16 +67,16 @@
                     confirmButtonText: 'Yes'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        statusofform =  true;//$("#datewiseform").valid();
+                        statusofform = true; //$("#datewiseform").valid();
                         if (statusofform) {
                             $(".preloader").show();
                             var deptform = $('#datewiseform');
                             var url = "{{ env('APP_URL') }}/getdatadatewiseclientsave";
                             $.ajax({
                                 type: "POST",
-                                    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                },
                                 url: url,
                                 data: deptform.serialize(),
                                 success: function(response) {
@@ -104,12 +99,12 @@
 
                                 },
                                 error: function(errorResponse) {
-                               
+
                                     if (errorResponse.responseJSON.status_code == 422) {
                                         $(".error").empty();
                                         $.each(errorResponse.responseJSON.message, function(key,
                                             value) {
-                                             
+
                                             inputErrorMsg = value[0];
                                             inputId = key;
                                             $('#' + inputId).after('<label id=' + inputId +
@@ -168,11 +163,7 @@
                             spcenotallow: true,
                             alphanumericwithspace: true
                         },
-                        long_index_long_short_percent: {
-                            required: true,
-                            spcenotallow: true,
-                            alphanumericwithspace: true
-                        },
+
                         future_stock_long: {
                             required: true,
                             spcenotallow: true,
@@ -193,11 +184,7 @@
                             spcenotallow: true,
                             alphanumericwithspace: true
                         },
-                        option_index_buy_call_put_percentage: {
-                            required: true,
-                            spcenotallow: true,
-                            alphanumericwithspace: true
-                        },
+                     
                         option_index_call_short: {
                             required: true,
                             spcenotallow: true,
@@ -208,11 +195,7 @@
                             spcenotallow: true,
                             alphanumericwithspace: true
                         },
-                        option_index_short_call_put_percent: {
-                            required: true,
-                            spcenotallow: true,
-                            alphanumericwithspace: true
-                        },
+
                         option_stock_call_long: {
                             required: true,
                             spcenotallow: true,
@@ -260,12 +243,7 @@
                             alphanumericwithspace: "Enter Valid Text"
 
                         },
-                        long_index_long_short_percent: {
-                            required: "Enter Long Index Long Short %",
-                            spcenotallow: "Enter Some Text",
-                            alphanumericwithspace: "Enter Valid Text"
 
-                        },
                         future_stock_long: {
                             required: "Enter Future Stock Long",
                             spcenotallow: "Enter Some Text",
@@ -290,12 +268,7 @@
                             alphanumericwithspace: "Enter Valid Text"
 
                         },
-                        option_index_buy_call_put_percentage: {
-                            required: "Enter Option Index buy Call Put %",
-                            spcenotallow: "Enter Some Text",
-                            alphanumericwithspace: "Enter Valid Text"
-
-                        },
+                       
                         option_index_call_short: {
                             required: "Enter Option Index Call Short",
                             spcenotallow: "Enter Some Text",
@@ -308,12 +281,7 @@
                             alphanumericwithspace: "Enter Valid Text"
 
                         },
-                        option_index_short_call_put_percent: {
-                            required: "Enter Option Index Short Call Put %",
-                            spcenotallow: "Enter Some Text",
-                            alphanumericwithspace: "Enter Valid Text"
 
-                        },
                         option_stock_call_long: {
                             required: "Enter Option Stock Call Long",
                             spcenotallow: "Enter Some Text",
