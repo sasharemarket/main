@@ -2,7 +2,6 @@
 @section('content')
     <div class="container-fluid py-4">
         <div class="row">
-
             <div class="col-xl-12 col-sm-12">
                 <div class="card">
                     <div class="card-body p-3">
