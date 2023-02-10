@@ -11061,7 +11061,7 @@ fieldset:disabled .btn {
 }
 
 .min-height-300 {
-  min-height: 300px !important;
+  min-height: 100vh !important;
 }
 
 .min-height-400 {
@@ -26934,3 +26934,7 @@ pre[class*="language-"] {
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
+
+.footer-raduis {
+  border-radius: 10px !important;
+}
