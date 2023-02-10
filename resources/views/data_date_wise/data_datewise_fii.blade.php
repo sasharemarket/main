@@ -7,7 +7,7 @@
                     <div class="card-body p-3">
                         <div class="row">
                             <form id="datewiseform" class="row g-3">
-                                <label class="form-label" for="fname">Client</label>
+                                <label class="form-label" for="fname">FII</label>
                                 <div class="col-md-6">
                                     <label class="form-label" for="future_index_long">Future Index Long</label>
                                     <input type="text" class="form-control" id="future_index_long"
