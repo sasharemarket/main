@@ -6,74 +6,90 @@
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="row">
-                                <form action="/action_page.php" id="datewiseform">
-                                    <label for="fname">Client</label><br>
-                                    <label for="fname">Future Index Long</label><br>
-                                    <input type="text" id="future_index_long" name="future_index_long"
-                                        value=""><br>
-                                    <label for="lname">Future Index Short</label><br>
-                                    <input type="text" id="future_index_short" name="future_index_short"
-                                        value=""><br>
+                            <form id="datewiseform" class="row g-3">
+                                <label class="form-label" for="fname">Client</label>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="future_index_long">Future Index Long</label>
+                                    <input type="text" class="form-control" id="future_index_long"
+                                        name="future_index_long" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="future_index_short">Future Index Short</label>
+                                    <input type="text" class="form-control" id="future_index_short"
+                                        name="future_index_short" value="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="future_stock_long">Future Stock Long</label>
+                                    <input type="text" class="form-control" id="future_stock_long"
+                                        name="future_stock_long" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="future_stock_short">Future Stock Short</label>
+                                    <input type="text" class="form-control" id="future_stock_short"
+                                        name="future_stock_short" value="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_index_call_long">Option Index Call Long</label>
+                                    <input type="text" class="form-control" id="option_index_call_long"
+                                        name="option_index_call_long" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_index_put_long">Option Index Put Long</label>
+                                    <input type="text" class="form-control" id="option_index_put_long"
+                                        name="option_index_put_long" value="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_index_call_short">Option Index Call Short</label>
+                                    <input type="text" class="form-control" id="option_index_call_short"
+                                        name="option_index_call_short" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_index_put_short">Option Index Put Short</label>
+                                    <input type="text" class="form-control" id="option_index_put_short"
+                                        name="option_index_put_short" value="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_stock_call_long">Option Stock Call Long </label>
+                                    <input type="text" class="form-control" id="option_stock_call_long"
+                                        name="option_stock_call_long" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_stock_put_long">Option Stock Put Long</label>
+                                    <input type="text" class="form-control" id="option_stock_put_long"
+                                        name="option_stock_put_long" value="">
+                                </div>
 
 
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_stock_call_short">Option Stock Call Short</label>
+                                    <input type="text" class="form-control" id="option_stock_call_short"
+                                        name="option_stock_call_short" value="">
 
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="option_stock_put_short">Option Stock Put Short</label>
+                                    <input type="text" class="form-control" id="option_stock_put_short"
+                                        name="option_stock_put_short" value="">
+                                </div>
 
-                                    <label for="fname">Future Stock Long</label><br>
-                                    <input type="text" id="future_stock_long" name="future_stock_long"
-                                        value=""><br>
-                                    <label for="lname">Future Stock Short</label><br>
-                                    <input type="text" id="future_stock_short" name="future_stock_short"
-                                        value=""><br>
-
-                                    <label for="lname">Option Index Call Long</label><br>
-                                    <input type="text" id="option_index_call_long" name="option_index_call_long"
-                                        value=""><br>
-
-                                    <label for="lname">Option Index Put Long</label><br>
-                                    <input type="text" id="option_index_put_long" name="option_index_put_long"
-                                        value=""><br>
-
-
-
-
-                                    <label for="fname">Option Index Call Short</label><br>
-                                    <input type="text" id="option_index_call_short" name="option_index_call_short"
-                                        value=""><br>
-                                    <label for="lname">Option Index Put Short</label><br>
-                                    <input type="text" id="option_index_put_short" name="option_index_put_short"
-                                        value=""><br>
-
-
-                                    <label for="lname">Option Stock Call Long </label><br>
-                                    <input type="text" id="option_stock_call_long" name="option_stock_call_long"
-                                        value=""><br>
-
-                                    <label for="lname">Option Stock Put Long</label><br>
-                                    <input type="text" id="option_stock_put_long" name="option_stock_put_long"
-                                        value=""><br>
-
-
-
-                                    <label for="lname">Option Stock Call Short</label><br>
-                                    <input type="text" id="option_stock_call_short" name="option_stock_call_short"
-                                        value=""><br>
-
-
-                                    <label for="lname">Option Stock Put Short</label><br>
-                                    <input type="text" id="option_stock_put_short" name="option_stock_put_short"
-                                        value=""><br>
-
-                                    <label for="lname">Total Long Contracts</label><br>
-                                    <input type="text" id="total_long_contracts" name="total_long_contracts"
-                                        value=""><br>
-
-
-
-                                    <label for="lname">Total Short Contracts</label><br>
-                                    <input type="text" id="total_short_contracts" name="total_short_contracts"
-                                        value=""><br>
-                                    <input type="button" value="Submit"id="datewisesubmit">
-                                </form>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="total_long_contracts">Total Long Contracts</label>
+                                    <input type="text" class="form-control" id="total_long_contracts"
+                                        name="total_long_contracts" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="total_short_contracts">Total Short Contracts</label>
+                                    <input type="text" class="form-control" id="total_short_contracts"
+                                        name="total_short_contracts" value="">
+                                </div>
+                                <div class="col-12">
+                                    <input type="button" class="btn btn-primary" value="Submit"id="datewisesubmit">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -93,7 +109,7 @@
                 confirmButtonText: 'Yes'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    statusofform = true; //$("#datewiseform").valid();
+                    statusofform = $("#datewiseform").valid();
                     if (statusofform) {
                         $(".preloader").show();
                         var deptform = $('#datewiseform');
@@ -134,7 +150,9 @@
 
                                         inputErrorMsg = value[0];
                                         inputId = key;
-                                        $('#' + inputId).after('<label id=' + inputId +
+                                        $('#' + inputId).after(
+                                            '<label class="error form-label" id=' +
+                                            inputId +
                                             '"-error" class="error" for="' +
                                             inputId + '">' + inputErrorMsg +
                                             '</label>')

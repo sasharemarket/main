@@ -26938,3 +26938,7 @@ pre[class*="language-"] {
 .footer-raduis {
   border-radius: 10px !important;
 }
+
+.error {
+  color: red
+}
